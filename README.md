@@ -1,5 +1,6 @@
 # WorkShop_Mongo_Spring
-Este projeto é uma aplicação web desenvolvida com o framework Spring Boot, que expõe uma API RESTful para interações com um banco de dados MongoDB. A aplicação utiliza o Spring MVC para a construção de endpoints REST e o Spring Data MongoDB para simplificar as operações com o banco de dados NoSQL.
+
+Este projeto é uma aplicação web desenvolvida com o framework Spring Boot, que expõe uma API RESTful para interações com um banco de dados MongoDB. A estrutura e boas práticas adotadas foram inspiradas no curso "Java Completo" ministrado por Nélio Alves na Udemy.
 
 ## Principais Componentes e Funcionalidades:
 
@@ -14,5 +15,4 @@ Este projeto é uma aplicação web desenvolvida com o framework Spring Boot, qu
 - **Testes Unitários e de Integração:** Garante a qualidade e confiabilidade do código.
 - **Documentação da API:** Utiliza Swagger para gerar documentação automática.
 
-Este projeto serve como um exemplo de boas práticas para o desenvolvimento de APIs RESTful utilizando o ecossistema Spring e o MongoDB.
-
+Este projeto é um exemplo prático de como aplicar os conceitos aprendidos no curso de Java Completo da Udemy, ministrado por Nélio Alves.

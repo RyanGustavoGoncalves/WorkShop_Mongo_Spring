@@ -2,7 +2,11 @@ package com.br.WorkshopMongo.DTO;
 
 import com.br.WorkshopMongo.domain.User;
 
-import java.util.Optional;
 
-public record DadosUserNovo(Optional<User> user) {
+public record DadosUserNovo(String id, String name, String email) {
+
+    public DadosUserNovo(User user) {
+        this(user.getId(), user.getName(), user.getEmail());
+    }
+
 }

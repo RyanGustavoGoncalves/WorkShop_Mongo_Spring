@@ -1,6 +1,7 @@
 package com.br.WorkshopMongo.controller;
 
 import com.br.WorkshopMongo.DTO.*;
+import com.br.WorkshopMongo.domain.Post;
 import com.br.WorkshopMongo.domain.User;
 import com.br.WorkshopMongo.domain.UserRepository;
 import com.br.WorkshopMongo.infra.ObjectNotFoundException;
@@ -14,6 +15,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -33,6 +35,19 @@ public class UserController {
         User user = userOptional.get(); // Obtendo o User do Optional
 
         return ResponseEntity.ok(new DadosUserNovo(user));
+    }
+
+    @GetMapping("/{id}/posts")
+    public ResponseEntity<List<Post>> detalharPost(@PathVariable String id) {
+        Optional<User> userOptional = repository.findById(id);
+
+        if (userOptional.isEmpty()) {
+            throw new ObjectNotFoundException("Objeto não encontrado!");
+        }
+
+        User user = userOptional.get(); // Obtendo o User do Optional
+
+        return ResponseEntity.ok(user.getPosts());
     }
 
 
